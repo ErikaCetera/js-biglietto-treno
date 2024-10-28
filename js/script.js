@@ -12,21 +12,25 @@ console.log(userAge);
 
 // ESECUZIONE LOGICA
 
-if (isNaN(userDistance, userAge)) {
+if (isNaN(userDistance)) {
+    alert("Puoi inserire solo valori numerici. Aggiorna la pagina!")
+} else if (isNaN(userAge)){
     alert("Puoi inserire solo valori numerici. Aggiorna la pagina!")
 } else {
     const priceStandard = userDistanceNum * priceDistance;
-    let = message; 
+    let promo;
+    let finalPrice;
+    let message; 
     if (userAgeNum < 18) {
-        const promo = (priceStandard / 100) * 20;
-        const finalPrice = priceStandard - promo;
-        message = `Il prezzo del biglietto è ${finalPrice} €`;
+        promo = (priceStandard / 100) * 20;
+        finalPrice = priceStandard - promo;
+        message = `Il prezzo del biglietto è ${finalPrice.toFixed(2)} €`;
     } else if (userAgeNum >= 65) {
-        const promo = (priceStandard / 100) * 40;
-        const finalPrice =  priceStandard - promo ;
-        message = `Il prezzo del biglietto è ${finalPrice} €`;
+        promo = (priceStandard / 100) * 40;
+        finalPrice =  priceStandard - promo ;
+        message = `Il prezzo del biglietto è ${finalPrice.toFixed(2)} €`;
     } else {
-        console.log(priceStandard);
+        message = `Il prezzo del biglietto è ${priceStandard.toFixed(2)} €`;
     }
 
     console.log(message);
